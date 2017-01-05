@@ -9,18 +9,17 @@ import css from './styles/app.scss';
 
 // Components
 import App from './components/App';
-import MainFeed from './components/MainFeed';
+import Activities from './components/Activities';
 
 import store, {history} from './store';
 
 // router will dictate which component child component we see
 // <Route path="/" component={Main}></Route>: at the very top level '/' use Main component
-// depending on URL structure, pass News or Post to Main
 const router = (
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App}>
-        <IndexRoute component={MainFeed}></IndexRoute>
+        <IndexRoute component={Activities}></IndexRoute>
       </Route>
     </Router>
   </Provider>
