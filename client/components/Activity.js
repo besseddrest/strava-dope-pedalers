@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 
-export class Activity extends Component {
+export default class Activity extends Component {
+  handleClick(e) {
+    e.nativeEvent.stopImmediatePropagation();
+    this.props.selectActivity();
+  }
   render() {
-    const item = this.props.item;
+    const { activity, i } = this.props;
     return (
-      <div>
-        <div>id: {item.id}</div>
-        <div>name: {item.name}</div>
-        <div>location: {item.location_city}, {item.location_state}</div>
-      </div>
+      <section onClick={this.props.selectActivity.bind(null, i)} className="activity">
+        <div>id: {activity.id}</div>
+        <div>name: {activity.name}</div>
+        <div>location: {activity.location_city}, {activity.location_state}</div>
+      </section>
     )
   }
 }

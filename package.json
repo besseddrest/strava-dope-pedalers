@@ -4,6 +4,7 @@
   "description": "Playing around with the Strava API",
   "main": "devServer.js",
   "dependencies": {
+    "autoprefixer": "^6.6.1",
     "babel-core": "^6.5.2",
     "babel-eslint": "^5.0.0",
     "babel-loader": "^6.2.3",
@@ -23,6 +24,7 @@
     "json-loader": "^0.5.4",
     "node-sass": "^4.0.0",
     "normalize.css": "^3.0.3",
+    "postcss-loader": "^1.2.1",
     "raven-js": "^2.1.1",
     "react": "^0.14.7",
     "react-addons-css-transition-group": "^0.14.7",

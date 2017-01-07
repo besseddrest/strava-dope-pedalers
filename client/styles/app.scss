@@ -3,3 +3,33 @@
 body {
 
 }
+
+.main-wrapper {
+  display:flex;
+}
+
+.sidebar {
+  flex-basis: 300px;
+  flex: 1;
+}
+
+.main {
+  display:flex;
+  flex: 3;
+  flex-wrap: wrap;
+}
+
+.activity {
+  flex: 1;
+  flex-basis: 33.333%;
+  min-height: 150px;
+  border: 1px solid blue;
+  box-sizing: border-box;
+
+  &__active {
+      flex-grow:2;
+      flex-shrink:2;
+      flex-basis:33.333%;
+      border: 2px solid red;
+  }
+}

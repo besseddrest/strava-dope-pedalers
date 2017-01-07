@@ -1,3 +1,10 @@
+export function setActivites(value) {
+  return {
+    type: 'SET_ACTIVITIES',
+    value
+  }
+}
+
 export function requestComplete(value) {
   return {
     type: 'REQUEST_COMPLETE',
@@ -5,11 +12,9 @@ export function requestComplete(value) {
   }
 }
 
-export function setActivites(value) {
-  console.log('updating');
-
+export function selectActivity(index) {
   return {
-    type: 'SET_ACTIVITIES',
-    value
+    type: 'SELECT_ACTIVITY',
+    index
   }
 }

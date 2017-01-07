@@ -7,12 +7,14 @@ import {Link} from 'react-router';
 const Main = React.createClass({
   render() {
     return (
-      <div>
-        <header className="header">
-          <h1>Strava App</h1>
-        </header>
+      <section className="main-wrapper">
+        <aside className="sidebar">
+          <header className="sidebar--header">
+            <h1>Strava App</h1>
+          </header>
+        </aside>
         {React.cloneElement(this.props.children, this.props)}
-      </div>
+      </section>
     )
   }
 });

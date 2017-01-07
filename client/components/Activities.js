@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Activity } from './Activity';
+import Activity from './Activity';
 import strava from 'strava-v3';
 
-export class Activities extends Component {
+export default class Activities extends Component {
   componentDidMount() {
     strava.athlete.listActivities(
       {
@@ -23,15 +23,14 @@ export class Activities extends Component {
   render() {
     let results = 'loading...';
     if (this.props.activities.length !== 0) {
-      results = this.props.activities.map((item, i) => <Activity {...this.props} i={i} key={i} item={item} />);
+      console.log(this.props.activities);
+      results = this.props.activities.map((activity, i) => <Activity {...this.props} i={i} key={i} activity={activity} />);
     }
 
     return (
-      <div>
+      <section className="main main--activities">
         { results }
-      </div>
+      </section>
     )
   }
 }
-
-export default Activities;
