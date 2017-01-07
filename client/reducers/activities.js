@@ -4,9 +4,6 @@ function activities(state = [], action){
     case 'REQUEST_COMPLETE':
     case 'SET_ACTIVITIES':
       return action.value;
-    case 'SELECT_ACTIVITY':
-      console.log(action);
-      return state;
     default:
       return state;
 

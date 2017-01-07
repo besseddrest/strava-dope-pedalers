@@ -4,13 +4,15 @@ import {browserHistory} from 'react-router';
 
 import rootReducer from './reducers/index';
 import activities from './data/activities';
+import activeCard from './data/activeCard';
 
 // import data
 
 // create an object for the default data
 // there should be a key for each reducer
 const defaultState = {
-  activities
+  activities,
+  activeCard
 };
 
 const store = createStore(rootReducer, defaultState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
