@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import {Link} from 'react-router';
 
 export default class Activity extends Component {
-  handleClick(e) {
-    e.nativeEvent.stopImmediatePropagation();
-    this.props.selectActivity();
-  }
   render() {
     const { activity, activeCard, i } = this.props;
     const classes = (i == activeCard.index) ? 'activity activity__active' : 'activity';

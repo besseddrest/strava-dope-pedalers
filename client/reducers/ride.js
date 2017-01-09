@@ -1,8 +1,8 @@
 // a reducer takes in two things: copy of the current state, action
-function activities(state = [], action){
+function ride(state = [], action){
   switch (action.type) {
     case 'REQUEST_COMPLETE':
-    case 'SET_ACTIVITIES':
+    case 'SET_RIDE':
       return action.value;
     default:
       return state;
@@ -10,4 +10,4 @@ function activities(state = [], action){
   return state;
 }
 
-export default activities;
+export default ride;

@@ -1,3 +1,10 @@
+export function requestComplete(value) {
+  return {
+    type: 'REQUEST_COMPLETE',
+    value
+  }
+}
+
 export function setActivites(value) {
   return {
     type: 'SET_ACTIVITIES',
@@ -5,9 +12,9 @@ export function setActivites(value) {
   }
 }
 
-export function requestComplete(value) {
+export function setRide(value) {
   return {
-    type: 'REQUEST_COMPLETE',
+    type: 'SET_RIDE',
     value
   }
 }

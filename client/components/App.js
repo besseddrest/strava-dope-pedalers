@@ -7,7 +7,8 @@ import Main from './Main';
 function mapStateToProps(state) {
   return {
     activities: state.activities,
-    activeCard: state.activeCard
+    activeCard: state.activeCard,
+    ride: state.ride
   }
 }
 
