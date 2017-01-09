@@ -18,18 +18,33 @@ body {
   flex: 3;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 10px 0;
 }
 
 .activity {
   flex-basis: 250px;
   min-height: 150px;
+  margin: 10px 0;
   border: 1px solid blue;
   box-sizing: border-box;
   transition:
-    flex .5s;
+    flex .5s,
+    transform .5s;
+  background: white;
 
   &__active {
     flex-grow: 2;
     border: 2px solid red;
+    transform: scale(1.05);
+
+    & div, & a {
+      opacity: 1;
+    }
+  }
+
+  &--id, &--location, &--link {
+    opacity: 0;
+    transition:
+      opacity .5s;
   }
 }

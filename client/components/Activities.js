@@ -23,7 +23,6 @@ export default class Activities extends Component {
   render() {
     let results = 'loading...';
     if (this.props.activities.length !== 0) {
-      console.log(this.props.activities);
       results = this.props.activities.map((activity, i) => <Activity {...this.props} i={i} key={i} activity={activity} />);
     }
 

@@ -1,5 +1,6 @@
 const activeCard = {
-  index: 0
+  index: null,
+  activity: {}
 }
 
 export default activeCard;

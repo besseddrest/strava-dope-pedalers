@@ -10,6 +10,7 @@ import css from './styles/app.scss';
 // Components
 import App from './components/App';
 import Activities from './components/Activities';
+import Single from './components/Single';
 
 import store, {history} from './store';
 
@@ -20,6 +21,7 @@ const router = (
     <Router history={history}>
       <Route path="/" component={App}>
         <IndexRoute component={Activities}></IndexRoute>
+        <Route path="/activity/:rideId" component={Single}></Route>
       </Route>
     </Router>
   </Provider>

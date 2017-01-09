@@ -10,7 +10,7 @@ const Main = React.createClass({
       <section className="main-wrapper">
         <aside className="sidebar">
           <header className="sidebar--header">
-            <h1>Strava App</h1>
+            <Link to="/"><h1>Strava App</h1></Link>
           </header>
         </aside>
         {React.cloneElement(this.props.children, this.props)}

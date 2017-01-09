@@ -3,7 +3,8 @@ function activeCard(state = [], action){
   switch (action.type) {
     case 'SELECT_ACTIVITY':
       return {
-        index: action.index
+        index: action.index,
+        activity: {}
       };
     default:
       return state;
